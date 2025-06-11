@@ -1,54 +1,34 @@
-# React + TypeScript + Vite
+# Book Management App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta aplicación de gestión de libros está construida utilizando tecnologías modernas de desarrollo web.
 
-Currently, two official plugins are available:
+## Tecnologías Principales
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React** (v19.0.0) - Biblioteca principal para la construcción de interfaces de usuario
+- **TypeScript** (v5.7.2) - Superset de JavaScript que añade tipado estático
+- **Vite** (v6.2.0) - Herramienta de construcción que ofrece un entorno de desarrollo más rápido
 
-## Expanding the ESLint configuration
+## Librerías y Dependencias
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Frontend
+- **React Bootstrap** (v2.10.9) - Framework de UI basado en Bootstrap
+- **React Router DOM** (v7.5.0) - Enrutamiento para aplicaciones React
+- **React Hook Form** (v7.56.3) - Manejo de formularios
+- **Yup** (v1.6.1) - Validación de esquemas
+- **SweetAlert2** (v11.22.0) - Alertas y modales personalizados
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Backend
+- **JSON Server** (v0.17.4) - API REST simulada para desarrollo y pruebas
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Herramientas de Desarrollo
+- **ESLint** (v9.21.0) - Linting de código
+- **TypeScript ESLint** - Reglas de linting específicas para TypeScript
+- **Concurrently** (v9.1.2) - Ejecución de múltiples comandos simultáneamente
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Configuración y Scripts
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- `npm run dev` - Inicia el servidor de desarrollo y el servidor JSON
+- `npm run build` - Compila y construye la aplicación para producción
+- `npm run lint` - Ejecuta el linting del código
+- `npm run preview` - Vista previa de la versión de producción
+- `npm run server` - Inicia el servidor JSON en el puerto 3001
