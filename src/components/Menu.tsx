@@ -9,8 +9,8 @@ function Menu() {
       expand="lg"
       className="rounded-3 d-flex justify-content-center"
     >
-      <ul className="navbar-nav text-white">
-        <li className="nav-item text-white">
+      <ul className="navbar-nav">
+        <li className="nav-item">
           <NavLink
             to="/"
             end
